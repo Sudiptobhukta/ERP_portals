@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,
+				initial-scale=1.0">
+    <title>STUDENT EXAMINATION PORTAL</title>
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+</head>
+
+<body>
+
+    <!-- for header part -->
+    <header>
+
+        <div class="logosec">
+            <div class="logo">STUDENT EXAMINATION PORTAL</div>
+            <!--<img src="C:\Users\Lenovo\OneDrive\Desktop\major pro assests\line.png" class="icn menuicn" id="menuicn" alt="menu-icon">-->
+        </div>
+
+        <div class="searchbar">
+            <input type="text" placeholder="Search">
+            <div class="searchbtn">
+                <img src="{% static 'pictures/search_1.png' %}" class="icn srchicn" alt="search-icon">
+            </div>
+        </div>
+
+        <div class="message">
+            <div class="circle"></div>
+            <img src="C:\Users\Lenovo\OneDrive\Desktop\major pro assests\bell.png" class="icn" alt="">
+            <div class="dp">
+                <img src="{{request.user.student.student_image.url}}" class="dpicn" alt="dp">
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <div class="navcontainer">
+            <nav class="nav">
+                <div class="nav-upper-options">
+                    <div class="nav-option option1">
+                        <img src="C:\Users\Lenovo\OneDrive\Desktop\major pro assests\dashlogo.png" class="nav-img" alt="dashboard">
+                        <h3> <a href="/home/">Dashboard</a></h3>
+                    </div>
+
+                    <div class="option2 nav-option">
+                        <img src="C:\Users\Lenovo\OneDrive\Desktop\major pro assests\articles.png" class="nav-img" alt="articles">
+                        <h3> 1 YEAR</h3>
+                    </div>
+                    <div class="option2 nav-option">
+                        <img src="C:\Users\Lenovo\OneDrive\Desktop\major pro assests\articles.png" class="nav-img" alt="articles">
+                        <h3> <a href="/2year/">2 YEAR</a></h3>
+                    </div>
+                    <div class="option2 nav-option">
+                        <img src="C:\Users\Lenovo\OneDrive\Desktop\major pro assests\articles.png" class="nav-img" alt="articles">
+                        <h3> <a href="/3year/">3 YEAR</a></h3>
+                    </div>
+
+</body>
+
+</html>
