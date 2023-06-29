@@ -14,9 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path,include,re_path
 from django.conf import settings
 from django.conf.urls.static import static
+
+
+# from django.conf.urls import url
+from django.views.static import serve
+from django_downloadview import ObjectDownloadView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,10 +38,12 @@ urlpatterns = [
     path("uploadpage/",include('students.urls')),
     path("check/",include('students.urls')),
     path("ImageUpload/",include('students.urls')),
+    path("Attendence/",include('students.urls')),
+    path("Profile/",include('students.urls')),
+    
+    # path(r'^download/(?<path>.*)$',include()),
     # path("admin/",include('students.urls'))
 
 
 ] + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT) 
 
-# if settings.DEBUG:
-#     urlpatterns+=static(settings.MEDIA_URL_2, document_root=settings.MEDIA_ROOT_2)
