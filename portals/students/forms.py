@@ -4,8 +4,6 @@ from django.contrib.auth.models import User
 from .models import *
 from django.forms import ModelForm
 
-
-
 class NewUserForm(UserCreationForm):
     
     email= forms.EmailField(required=True)
@@ -33,37 +31,9 @@ class StudentForm(forms.ModelForm):
             'files': '',    
                         }
         
-class ImageForm(forms.ModelForm):
-    class Meta:
-        model = student
-        fields= ('First_name','student_image')
-        labels= {
-            'name': '',
-            'image': '',
-        }
+
         
 
     
 
 
-# class StudentForm(forms.ModelForm):
-#     name = forms.CharField(label='Name', max_length=100)
-#     files = forms.FileField()
-
-# class StudentForm(ModelForm):
-#     class Meta:
-#         model = Customer
-#         fields = ('First_name','files')
-    
-
-# class uploadForm(forms.Form):
-#     name = forms.CharField(max_length=50)
-#     file = forms.FileField()
-     
-     
-    
-# class order_marksheet_Form(forms.ModelForm):
-    
-#     class Meta:
-#         model = marksheet
-#         fields = ("name","math")
