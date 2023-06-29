@@ -51,7 +51,7 @@ body{
     bottom: -80px;
 }
 form{
-    height: 773px;
+    
     width: 450px;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
@@ -63,6 +63,7 @@ form{
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
     padding: 50px 35px;
+    
 }
 form *{
     font-family: 'Poppins',sans-serif;
@@ -80,8 +81,8 @@ form h3{
 
 label{
     display: block;
-    margin-top: 30px;
-    font-size: 16px;
+    margin-top: 17px;
+    font-size: 10px;
     font-weight: 500;
 }
 input{
@@ -139,6 +140,8 @@ button{
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
+
+   
     <form action="" method="post">
         {% if messages  %}
         {% for message in messages  %}
@@ -162,6 +165,9 @@ button{
 
         <label for="email">Email</label>
         <input type="email" placeholder="Email or Phone" name="email" id="email">
+  
+        <label for="email">Enrollment</label>
+        <input type="text" placeholder="Enrollment" name="Enrollment" id="Enrollment">
 
         <label for="password1">Password</label>
         <input type="password" placeholder="Password" id="password1" name="password1">
@@ -173,5 +179,6 @@ button{
         
         <a href="/SignUp" >i have already account</a>
     </form>
+
 </body>
 </html>
